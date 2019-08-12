@@ -1,0 +1,49 @@
+# standard configuration
+# statistics program R. please install ggplot2 (http://ggplot2.org/)
+R	/usr/bin/R
+# BS-seq aligner
+BSAligner	/home/fuzl/soft/methy_pipe/methy-pipe2/cpp_prog/BSAligner
+#reference genome index for the BSAaligner
+BS_INDEX	/home/fuzl/soft/methy_pipe/methy-pipe2/database/hg19
+#each chromosome length
+LIST_CHR_LEN	/home/fuzl/soft/methy_pipe/methy-pipe2/database/hg19.size
+#Watson strand reference (fasta)
+GENOME_W_FA	/home/fuzl/soft/methy_pipe/methy-pipe2/database/hg19.W.ori.fa
+#Crick strand reference (fasta)
+GENOME_C_FA	/home/fuzl/soft/methy_pipe/methy-pipe2/database/hg19.C.ori.fa
+#frequency for each 3mer in reference genome
+HG_3MER	/home/fuzl/soft/methy_pipe/methy-pipe2/database/hg19.3mer
+#windows around TSS (ucsc reference gene)
+TSS	/home/fuzl/soft/methy_pipe/methy-pipe2/database/TSS.win.bed
+#sequencing data format fastq (fq) or fasta (fa)
+SEQ_FORMAT	fq
+#prefix for each output result
+OUT_PREFIX	test_v2
+#sequencing mode in a paired-end manner (PE) or single-end manner (SE)
+SEQ_MODE	PE
+#how many first cycles supposed to be used, for example, 75 means the cycles after 75th would be omitted
+USED_CYCLES	75
+#how many threads supposed to be used for the BSAligner
+THREAD	20
+#whether to merge the all of alignments in this run
+MERGE	0
+#window size to profile the methylation density across the genome when considering the CpG sites
+BIN_SIZE_CPG	100e3
+#window size to profile the methylation density across the genome when considering the non-CpG sites
+BIN_SIZE_NONCPG	100e3
+#how many total cycles supposed to be used (read1+read2).
+SEQUENC_TOT_CYCLE	150
+#a separated files recording the path of fastq or fasta as well as the sample names that are to be analyzed
+INFO	/home/fuzl/soft/methy_pipe/dataset/dataset_full/analisys_v2/info
+#the output directory
+OUT_DIR	/home/fuzl/soft/methy_pipe/dataset/dataset_full/analisys_v2/Methy-Pipe2_output
+#mismatch allowed for each end
+MISMATCH	2
+#minimal insert size allowed for paired-end reads
+MIN_INS	0
+#maximal insert size allowed for paired-end reads
+MAX_INS	600
+#qualities are Phred 38=Phred(33+5) or 69=Phred(64+5)
+Phred 38
+#TRIM
+TRIM 1

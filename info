@@ -1,0 +1,5 @@
+#sample-id	lane-number	sample-descriptions	path-to-raw-fastq-data
+PW396w	7	PW396w	fastq_big_dataset/PW396w.read1.fq	fastq_big_dataset/PW396w.read2.fq	
+CVS396	8	CVS396	fastq_big_dataset/CVS396.read1.fq	fastq_big_dataset/CVS396.read2.fq
+#MDR	control	treat
+MDR	PW396w_7	CVS396_8
